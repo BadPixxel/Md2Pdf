@@ -1,0 +1,22 @@
+      
+#################################################################################
+## COLLECTIONS : DISPLAY OF COLLECTIONS By CONTROLLER 
+badpixxel_md2pdf_demo_home:
+    path:     /
+    defaults: { _controller: BadPixxel\Md2Pdf\Bundle\Controller\DemoController::indexAction }
+
+badpixxel_md2pdf_demo_html:
+    path:       /{pdfClass}/html
+    defaults: { _controller: BadPixxel\Md2Pdf\Bundle\Controller\DemoController::htmlAction }
+
+badpixxel_md2pdf_demo_html_render:
+    path:       /{pdfClass}/html/render
+    defaults: { _controller: BadPixxel\Md2Pdf\Bundle\Controller\DemoController::htmlRenderAction }
+
+badpixxel_md2pdf_demo_pdf:
+    path:       /{pdfClass}/pdf
+    defaults: { _controller: BadPixxel\Md2Pdf\Bundle\Controller\DemoController::pdfAction }
+
+badpixxel_md2pdf_demo_pdf_render:
+    path:       /{pdfClass}/pdf/render
+    defaults: { _controller: BadPixxel\Md2Pdf\Bundle\Controller\DemoController::pdfRenderAction }

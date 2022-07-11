@@ -1,0 +1,38 @@
+
+<br />
+<br />
+<br />
+
+{% if logo is not empty %}
+![alt text]({{ logo }})
+{: class="col-50 centered"}
+{% endif %}
+
+<br />
+
+# {{ title| default(document.title) }}
+
+<br />
+<br />
+
+### {{ subtitle| default("") }}
+{: class="align-center"}
+
+{{ introduction| default("") }}
+{: class="col-75 centered"}
+
+<br />
+
+{{ author| default("") }}
+{: class="col-30 centered"}
+
+> {{ version| default("") }}
+{: class="col-30 centered"}
+
+<br />
+
+{{ disclaimer| default("") }}
+{: class="col-75 centered text-info"}
+
+&nbsp;
+{: class="page-break"}

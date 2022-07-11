@@ -1,0 +1,65 @@
+<html>
+
+    <head>
+        {% block head %}
+
+            {% if part_styles|default(false) is not empty %}
+                <!-- CSS Styles -->
+                <style type="text/css">
+                    {{ part_styles | raw }}
+                </style>
+                <!-- END CSS Styles -->
+            {% endif %}
+
+
+
+            {% if useFontawesome|default(false) == true %}
+    {#            {% include "@Pdf/Styles/fontawesome.html.twig" %}#}
+            {% endif %}
+
+        {% endblock %}
+    </head>
+
+    <body>
+        <!-- Cover Page -->
+        {% if part_cover|default(false) is not empty %}
+            <div id="cover">
+                {{ part_cover | raw }}
+            </div>
+        {% endif %}
+        <!-- END Cover Page -->
+
+        {% block cover %}
+{#            {% include "@Pdf/Pages/cover.standard.html.twig" %}#}
+        {% endblock %}
+        <!-- END Page de Garde -->
+            
+        {% apply spaceless %}
+
+            {% if part_header|default(false) is not empty %}
+                <!-- Page Header -->
+                <div id="header">
+                        {{ part_header | raw }}
+                </div>
+                <!-- END Page Header -->
+            {% endif %}
+
+            {% if part_footer|default(false) is not empty %}
+                <!-- Page Footer -->
+                <div id="footer">
+                        {{ part_footer | raw }}
+                </div>
+                <!-- END Page Footer -->
+            {% endif %}
+
+            {% if part_contents | default(false) is not empty %}
+                <!-- Pdf Contents -->
+                <div id="content">
+                      {{ part_contents | raw }}
+                </div>
+                <!-- END Pdf Contents -->
+            {% endif %}
+
+        {% endapply %}
+    </body>
+</html>

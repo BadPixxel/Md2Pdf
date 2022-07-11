@@ -1,0 +1,18 @@
+
+#################################################################################
+## Md2Pdf Bundle Demonstration Pages
+badpixxel_md2pdf_demo:
+    resource: "@Md2PdfBundle/Resources/config/routing/demo.yml"
+    prefix:   /
+
+################################################################################
+# Symfony WebProfiler Routes
+_wdt:
+    resource:   "@WebProfilerBundle/Resources/config/routing/wdt.xml"
+    prefix:     /_wdt
+
+################################################################################
+# Symfony Profiler Routes
+_profiler:
+    resource:   "@WebProfilerBundle/Resources/config/routing/profiler.xml"
+    prefix:     /_profiler    

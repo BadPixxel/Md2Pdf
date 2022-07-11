@@ -1,0 +1,75 @@
+
+
+{#
+LIST of Markdown Features Demo Documents
+#}
+{% set featuresDemos = {
+    "EmptyPdf": "Empty Pdf",
+    "LayoutPdf": "Layout Demo",
+    "JustHtmlPdf": "Html Only",
+    "MarkdownSimplePdf": "Simple MD Syntax",
+    "MarkdownTablesPdf": "Markdown Tables",
+} %}
+
+{#
+LIST of Samples Documents
+#}
+{% set samplesDemos = {
+    "InvoicePdf": "Sample Invoice",
+    "ReportPdf": "Sample Report",
+    "BadPixxelReportPdf": "BadPixxel Report",
+    "SplashInvoicePdf": "Splash Sync Invoice",
+    "SplashSyncReportPdf": "Splash Sync Report",
+} %}
+
+
+<!-- Sidebar -->
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ path("badpixxel_md2pdf_demo_home") }}">
+        <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Md2Pdf Demo</div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+
+    <!-- Heading -->
+    <div class="sidebar-heading">Features Demo Pdfs</div>
+    {% for code, name in featuresDemos %}
+        <li class="nav-item">
+            <a href="{{ path("badpixxel_md2pdf_demo_pdf", { pdfClass: code}) }}" class="nav-link py-1">
+                <i class="fas fa-fw fa-file-pdf"></i>
+                {{ name  }}
+            </a>
+        </li>
+    {% endfor %}
+
+    <div class="sidebar-heading">Sample Pdfs</div>
+    {% for code, name in samplesDemos %}
+        <li class="nav-item">
+            <a href="{{ path("badpixxel_md2pdf_demo_pdf", { pdfClass: code}) }}" class="nav-link py-1">
+                <i class="fas fa-fw fa-file-pdf"></i>
+                {{ name  }}
+            </a>
+        </li>
+    {% endfor %}
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+
+</ul>
+<!-- End of Sidebar -->

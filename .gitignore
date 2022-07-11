@@ -1,0 +1,6 @@
+/vendor/
+/.php-cs-fixer.cache
+/yarn.lock
+/yarn-error.log
+/node_modules/
+/var/cache/dev/

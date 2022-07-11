@@ -1,0 +1,14 @@
+{% trans_default_domain "SplashWidgetsBundle" %}   
+{% extends "@Md2Pdf/Demo/Layout/base.html.twig" %}
+
+{% block body %}
+    <iframe width="100%" height="800px"
+            src="{{ path("badpixxel_md2pdf_demo_html_render", { 'pdfClass': pdfClass}) }}"
+    >
+    </iframe>
+{% endblock body%}
+
+
+    
+
+

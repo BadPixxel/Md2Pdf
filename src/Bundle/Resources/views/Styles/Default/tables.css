@@ -1,0 +1,61 @@
+
+/* TABLE OF CONTENTS CSS */
+
+table {
+    border: 0px;
+    border-collapse: collapse;
+}
+
+.table-center table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/** NO Style Tables */
+.table-no-style th, .table-no-style tr:nth-child(even) {
+    background-color: transparent !important;
+}
+
+/** Bordered Tables */
+.table-bordered {
+    border-collapse: collapse;
+}
+
+.table-bordered tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.table-bordered table, .table-bordered  td, .table-bordered  th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px 8px;
+}
+
+.table-bordered th {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+    background-color: var(--light-color);
+}
+
+/** NO Border Tables */
+.table-no-border table, .table-no-border thead, .table-no-border td, .table-no-border th {
+    border: 1px solid transparent !important;
+}
+
+/** Invoices Tables with Data on Right */
+.table-invoice th {
+    text-align: right;
+    width: 10%;
+}
+/*.table-invoice td:first-child, */
+.table-invoice th:first-child {
+    text-align: left;
+    width: auto;
+}
+.table-totals tr:last-child {
+    font-weight: bold;
+    background-color: var(--info-color);
+}
+
+

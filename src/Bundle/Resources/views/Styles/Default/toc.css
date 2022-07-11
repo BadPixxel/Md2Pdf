@@ -1,0 +1,12 @@
+
+/* TABLE OF CONTENTS CSS */
+
+.table-of-contents {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.table-of-contents a {
+    text-decoration: none;
+    font-size:1.1em;
+}

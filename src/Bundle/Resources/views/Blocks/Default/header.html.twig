@@ -1,0 +1,20 @@
+
+{#
+    STANDARD IMMO-POP PDF HEADER
+#}
+<div class="row">
+    {% if logo is not empty %}
+        <div class="col-25  float" style="padding-left: 10px; padding-top: 5px;">
+            <img src="{{ logo }}" alt="{{ title | default("Document Title")}}" height="55px">
+        </div>
+        <div class="col-75 float" style="text-align:center;">
+            <h4>{{ title | default("Document Title")}}</h4>
+            {{ subtitle | default("")}}
+        </div>
+    {% else %}
+        <div class="col-100  float" style="text-align:center;">
+            <h4>{{ title | default("Document Title")}}</h4>
+            {{ subtitle | default("")}}
+        </div>
+    {% endif %}
+</div>

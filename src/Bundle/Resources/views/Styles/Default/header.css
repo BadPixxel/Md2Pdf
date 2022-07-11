@@ -1,0 +1,19 @@
+
+/* PAGE HEADER CSS */
+#header  {
+    position:               fixed;
+    top:                    -80px;
+    left:                   0px;
+    right:                  0px;
+    height:                 65px;
+    color:                  var(--dark-color);
+    margin-left:            -25px;
+    margin-right:           -25px;
+    background-color:       var(--light-color);
+    border-bottom:          2px solid;
+    border-bottom-color:    var(--primary-color);
+}
+
+#header h4 {
+  margin-bottom: 3px;
+}

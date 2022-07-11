@@ -1,0 +1,26 @@
+/* PAGE CORE CSS */
+@page {
+  margin-top:       80px;
+  margin-left:      25px;
+  margin-right:     25px;
+  margin-bottom:    50px;
+}
+
+.page-break-after {
+    clear: both;
+    page-break-before: always;
+}
+
+.page-break {
+    clear: both;
+    page-break-before: always;
+}
+
+.page-number:after {
+     content: counter(page);
+}
+
+.no-page-break {
+    page-break-before: unset !important;
+    page-break-after: unset !important;
+}

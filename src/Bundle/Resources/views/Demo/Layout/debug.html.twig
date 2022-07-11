@@ -1,0 +1,17 @@
+
+<div class="collapse mb-2" id="collapseDebug">
+    <div class="card card-body">
+
+        {% if document is defined %}
+            <div class="row">
+                <div class="col-md-6">
+                    {{ dump(document) }}
+                </div>
+                <div class="col-md-6">
+                    {{ dump(mdDocument) }}
+                </div>
+            </div>
+        {% endif %}
+
+    </div>
+</div>

@@ -1,0 +1,32 @@
+
+/* PAGE GRID LAYOUT CSS */
+.row { clear: both; }
+.float { float: left; }
+.col-25 { width: 25%; }
+.col-33 { width: 33%; }
+.col-50 { width: 50%; }
+.col-66 { width: 66%; }
+.col-75 { width: 75%; }
+.col-80 { width: 80%; }
+.col-90 { width: 90%; }
+.col-100 { width: 100%; }
+
+.align-left {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    width: 100%;
+    text-align: center;
+}
+
+.centered {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

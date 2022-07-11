@@ -1,0 +1,22 @@
+/* PAGE FOOTER CSS */
+#footer {
+    position:           fixed;
+    left:               0px;
+    right:              0px;
+    bottom:             -50px;
+    height:             25px;
+    font-size:          0.8em;
+    color:              var(--dark-color);
+    margin-left:        -25px;
+    margin-right:       -25px;
+    background-color:   var(--light-color);
+    padding-bottom:     5px;
+}
+
+.fixed-bottom {
+    position:   absolute;
+    width:      100%;
+    bottom:     5px;
+    font-size:  0.9em;
+    text-align: center;
+}

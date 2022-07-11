@@ -1,0 +1,65 @@
+{
+    "name":                 "badpixxel/md2pdf",
+    "description":          "Build & Render Pdf from Markdown or Twig Templates",
+    "type":                 "package",
+    "prefer-stable":        true,
+    "license":              "MIT",
+    "minimum-stability":    "stable",
+
+    "authors": [
+      {
+        "name": "BadPixxel",
+        "email": "eshop.bpaquier@gmail.com"
+      }
+    ],
+
+    "autoload": {
+      "psr-4": {
+          "BadPixxel\\Md2Pdf\\": "./src"
+      },
+      "files": [
+      ],
+      "exclude-from-classmap": [
+          "/tests/"
+      ]
+    },
+    "autoload-dev": {
+        "psr-4": { "BadPixxel\\Md2Pdf\\Tests\\": "tests" },
+        "classmap": [ "app/AppKernel.php" ]
+    },
+
+    "require": {
+        "php":                                "^7.4|^8.0",
+
+        "twig/twig":                          "~2.0|~3.0",
+        "twig/markdown-extra":                "@stable",
+        "twig/extra-bundle":                  "@stable",
+        "dompdf/dompdf":                      "@stable",
+        "league/commonmark":                  "^2.3"
+    },
+
+    "require-dev": {
+        "badpixxel/php-sdk":                  "~2.0",
+
+        "symfony/symfony":                    "~4.4",
+        "symfony/phpunit-bridge":             "^3.0",
+        "symfony/webpack-encore-bundle":      "^1.7",
+        "symfony/monolog-bundle":             "^2.0|^3.0",
+        "fzaninotto/faker":                   "dev-master"
+    },
+
+    "archive": {
+        "exclude": ["/docs"]
+    },
+    "config": {
+        "allow-plugins": {
+            "phpro/grumphp": true
+        }
+    },
+    "extra": {
+        "symfony-app-dir":                          "app",
+        "symfony-bin-dir":                          "bin",
+        "symfony-var-dir":                          "var",
+        "symfony-web-dir":                          "web"
+    }
+}

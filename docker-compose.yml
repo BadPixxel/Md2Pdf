@@ -1,0 +1,71 @@
+
+################################################################################
+#
+# Copyright (C) 2020 BadPixxel <www.badpixxel.com>
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+#
+################################################################################
+
+################################################################################
+# Docker Compose File
+################################################################################
+
+version: "3.5"
+
+services:
+
+    ################################################################################
+    # PHP 8.1
+    php-8.1:
+        image: "registry.gitlab.com/badpixxel-projects/php-sdk:php-8.1"
+        container_name: php81.badpixxel.md2pdf.local
+        volumes:
+            - ./:/var/www/html
+            - vendor-php81:/var/www/html/vendor
+        command:        ['sh', '-c', 'composer update && apache2-foreground']
+        networks:
+            md2pdf:      { ipv4_address: 172.203.0.81, aliases: [ php81.badpixxel.md2pdf.local ] }
+
+    ################################################################################
+    # PHP 8.0
+    php-8.0:
+        image: "registry.gitlab.com/badpixxel-projects/php-sdk:php-8.0"
+        container_name: php80.badpixxel.md2pdf.local
+        volumes:
+            - ./:/var/www/html
+            - vendor-php80:/var/www/html/vendor
+        command:        ['sh', '-c', 'composer update && apache2-foreground']
+        networks:
+            md2pdf:      { ipv4_address: 172.203.0.80, aliases: [ php80.badpixxel.md2pdf.local ] }
+
+    ################################################################################
+    # PHP 7.4
+    php-7.4:
+        image: "registry.gitlab.com/badpixxel-projects/php-sdk:php-7.4"
+        container_name: php74.badpixxel.md2pdf.local
+        volumes:
+            - ./:/var/www/html
+            - vendor-php74:/var/www/html/vendor
+        command:        ['sh', '-c', 'composer update && apache2-foreground']
+        networks:
+            md2pdf:      { ipv4_address: 172.203.0.74, aliases: [ php74.badpixxel.md2pdf.local ] }
+
+networks:
+    ################################################################################
+    # Default Private Network
+    md2pdf:
+        driver: bridge
+        ipam:
+            config:
+                - subnet: 172.203.0.0/24
+
+volumes:
+    vendor-php81:   ~
+    vendor-php80:   ~
+    vendor-php74:   ~

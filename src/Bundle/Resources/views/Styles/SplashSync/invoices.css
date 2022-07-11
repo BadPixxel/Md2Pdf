@@ -1,0 +1,15 @@
+
+.table-invoice th {
+    background-color:   var(--primary-color) !important;
+    color:              var(--white-color);
+}
+
+.table-invoice-totals th {
+    background-color:   var(--secondary-color) !important;
+    color:              var(--dark-color);
+}
+
+.table-invoice-totals tr:last-child {
+    background-color:   var(--primary-color) !important;
+    color:              var(--white-color);
+}

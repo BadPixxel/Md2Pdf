@@ -1,0 +1,71 @@
+
+<html lang="en">
+    
+    {% include "@Md2Pdf/Demo/Layout/head.html.twig" %}
+
+    <body id="page-top" cz-shortcut-listen="true">
+
+      <!-- Page Wrapper -->
+      <div id="wrapper">
+
+        {% include "@Md2Pdf/Demo/Layout/sidebar.html.twig" %}
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Begin Page Content -->
+            <div class="container-fluid mt-4">
+                
+                <!-- Page Title -->
+                <h1 class="h3 mb-2 text-gray-800">
+
+                    {% block headline %}{{ document.title }}{% endblock %}
+
+                    {% if pdfClass is defined %}
+                        <a href="{{ path("badpixxel_md2pdf_demo_html", { pdfClass: pdfClass}) }}"
+                           class="btn btn-sm btn-primary">
+                            <i class="fas fa-fw fa-list-alt"></i>
+                            Html
+                        </a>
+                        <a href="{{ path("badpixxel_md2pdf_demo_pdf", { pdfClass: pdfClass}) }}"
+                           class="btn btn-sm btn-danger">
+                            <i class="fas fa-fw fa-list-alt"></i>
+                            Pdf
+                        </a>
+                    {% endif %}
+                    <button class="btn btn-sm  btn-outline-warning" type="button"
+                            data-toggle="collapse" data-target="#collapseDebug"
+                            aria-expanded="false" aria-controls="collapseDebug"
+                    >
+                        Show Debug
+                    </button>
+
+                </h1>
+                <!-- End Page Title -->
+
+                {% block debug %}
+                    {% include "@Md2Pdf/Demo/Layout/debug.html.twig" %}
+                {% endblock %}
+
+                {% block body %}
+
+                {% endblock body%}
+
+                <!-- Content Row -->
+                <div class="row justify-content-around">
+                    {% block content_row %}
+                    {% endblock content_row %}
+                </div>
+                <!-- End of Content Row -->
+                
+            </div>
+            <!-- End of Page Content -->
+        </div>
+        <!-- End of Content Wrapper -->
+
+      </div>
+      <!-- End of Page Wrapper -->
+
+    {% include "@Md2Pdf/Demo/Layout/footer.html.twig" %}
+
+    </body>
+</html>

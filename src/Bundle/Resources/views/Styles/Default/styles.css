@@ -1,0 +1,108 @@
+
+/* PAGE HTML STYLES CSS */
+
+body {
+    /*font-family: DejaVu Sans;*/
+    font-size: 75%;
+}
+
+/* On teste quelques d'options css différentes */
+h1, .h1 {
+    text-transform: uppercase;
+    text-align:     center;
+    font-weight:    bold;
+    font-size:      2em;
+    text-decoration: underline solid 5px var(--primary-color);
+}
+
+#content h1 {
+    clear: both;
+    page-break-before: always;
+}
+
+h2, .h2 {
+    font-style:     italic;
+    font-weight:    bold;
+    font-size:      1.5em;
+    border-bottom:  solid 1px;
+    border-bottom-color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+h3, .h3 {
+    text-transform: uppercase;
+    color: var(--black-color);
+    margin-left: 10px;
+    margin-bottom: 3px;
+}
+
+h4, .h5 {
+    text-transform: uppercase;
+    color: var(--black-color);
+    margin-left: 20px;
+    margin-bottom: 3px;
+}
+
+h5, .h5 {
+    font-style: italic;
+    font-weight: normal;
+    margin-left: 30px;
+}
+
+hr {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: var(--black-color) !important;
+}
+
+pre {
+    background-color: var(--light-color) !important;
+    padding: 5px;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.p-15 {
+    padding: 15px;
+}
+
+.p-25 {
+    padding: 25px;
+}
+
+/*#content {*/
+/*    margin-top: 25px;*/
+/*    margin-bottom: 25px;*/
+/*    margin-left: 25px;*/
+/*    margin-right: 25px;*/
+/*}*/
+
+.bg-primary     { background-color: var(--primary-color);   }
+.bg-secondary   { background-color: var(--secondary-color); }
+.bg-danger      { background-color: var(--danger-color);    }
+.bg-warning     { background-color: var(--warning-color);   }
+.bg-info        { background-color: var(--info-color);      }
+.bg-success     { background-color: var(--success-color);   }
+.bg-light       { background-color: var(--light-color);     }
+.bg-white       { background-color: var(--white-color);     }
+.bg-dark        { background-color: var(--dark-color);      }
+
+.text-primary   { color: var(--primary-color);      }
+.text-secondary { color: var(--secondary-color);    }
+.text-danger    { color: var(--danger-color);       }
+.text-warning   { color: var(--warning-color);      }
+.text-info      { color: var(--info-color);         }
+.text-success   { color: var(--success-color);      }
+.text-light     { color: var(--light-color);        }
+.text-white     { color: var(--white-color);        }
+.text-dark      { color: var(--dark-color);         }
+

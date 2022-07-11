@@ -1,0 +1,9 @@
+
+parameters:
+
+    kernel.secret:          ThisIsNotASecretKey
+
+    locale: en
+    locales:
+        - en
+        - fr

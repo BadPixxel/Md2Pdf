@@ -1,0 +1,43 @@
+
+<table style="width: 100%">
+    <tbody>
+    <tr>
+        <td style="width: 32%" id="{{ leftId | default("3-columns-left") }}"  class="{{ leftClass | default("") }}">
+                {% if leftTemplate is defined %}
+                    {% include leftTemplate ignore missing %}
+                {% elseif leftContents is defined %}
+                    {% apply markdown_to_html %}
+                        {{ leftContents|raw }}
+                    {% endapply %}
+                {% else %}
+                    No Left Contents Provided
+                {% endif %}
+        </td>
+        <td style="width: 2%"></td>
+        <td style="width: 32%" id="{{ rightId | default("3-columns-center") }}"  class="{{ centerClass | default("") }}">
+            {% if centerTemplate is defined %}
+                {% include centerTemplate ignore missing %}
+            {% elseif centerContents is defined %}
+                {% apply markdown_to_html %}
+                    {{ centerContents|raw }}
+                {% endapply %}
+            {% else %}
+                No Center Contents Provided
+            {% endif %}
+        </td>
+        <td style="width: 2%"></td>
+        <td style="width: 32%" id="{{ rightId | default("3-columns-right") }}"  class="{{ rightClass | default("") }}">
+            {% if rightTemplate is defined %}
+                {% include rightTemplate ignore missing %}
+            {% elseif rightContents is defined %}
+                {% apply markdown_to_html %}
+                    {{ rightContents|raw }}
+                {% endapply %}
+            {% else %}
+                No Right Contents Provided
+            {% endif %}
+        </td>
+    </tr>
+    </tbody>
+</table>
+

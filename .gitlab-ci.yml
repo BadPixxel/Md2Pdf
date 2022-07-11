@@ -48,6 +48,8 @@ stages:
     script:
         # Execute Grumphp Testsuite
         - curl -s https://raw.githubusercontent.com/BadPixxel/Php-Sdk/main/ci/grumphp.sh  | sh
+        # Test Building a Pdf
+        - php render.php MarkdownSimplePdf
     ################################################################################
     # Run After Script
     after_script:

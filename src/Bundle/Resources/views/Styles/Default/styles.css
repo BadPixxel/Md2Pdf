@@ -62,11 +62,6 @@ a {
     color: var(--black-color) !important;
 }
 
-pre {
-    background-color: var(--light-color) !important;
-    padding: 5px;
-}
-
 .p-10 {
     padding: 10px;
 }
@@ -78,13 +73,6 @@ pre {
 .p-25 {
     padding: 25px;
 }
-
-/*#content {*/
-/*    margin-top: 25px;*/
-/*    margin-bottom: 25px;*/
-/*    margin-left: 25px;*/
-/*    margin-right: 25px;*/
-/*}*/
 
 .bg-primary     { background-color: var(--primary-color);   }
 .bg-secondary   { background-color: var(--secondary-color); }

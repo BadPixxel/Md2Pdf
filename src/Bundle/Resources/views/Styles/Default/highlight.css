@@ -1,0 +1,19 @@
+pre {
+    margin: 0;
+}
+
+code {
+    display: block;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 10pt;
+    overflow-x: auto;
+    padding: 0.5em;
+    scrollbar-width: thin;
+    -moz-tab-size: 4;
+    tab-size: 4;
+}
+
+pre code.hljs {
+    /* compatible with school-book */
+    padding: 16px 30px 20px;
+}

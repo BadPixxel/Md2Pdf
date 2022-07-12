@@ -6,3 +6,10 @@
 {% include "Styles/Default/grid.css" %}
 {% include "Styles/Default/tables.css" %}
 {% include "Styles/Default/toc.css" %}
+
+<!-- Code Highlight Css -->
+{% include "Styles/Default/highlight.css" %}
+{% if hljsCss is defined and hljsCss is not empty %}
+    {{ hljsCss|raw }}
+{% endif %}
+<!-- END Code Highlight Css -->

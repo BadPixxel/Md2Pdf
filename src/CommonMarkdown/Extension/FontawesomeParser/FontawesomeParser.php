@@ -18,7 +18,6 @@ use League\CommonMark\Parser\Inline\InlineParserInterface;
 use League\CommonMark\Parser\Inline\InlineParserMatch;
 use League\CommonMark\Parser\InlineParserContext;
 
-
 class FontawesomeParser implements InlineParserInterface
 {
     /**

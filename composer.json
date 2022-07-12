@@ -14,14 +14,12 @@
     ],
 
     "autoload": {
-      "psr-4": {
-          "BadPixxel\\Md2Pdf\\": "./src"
-      },
-      "files": [
-      ],
-      "exclude-from-classmap": [
-          "/tests/"
-      ]
+        "psr-4": {
+            "BadPixxel\\Md2Pdf\\": "./src"
+        },
+        "exclude-from-classmap": [
+            "/tests/"
+        ]
     },
     "autoload-dev": {
         "psr-4": { "BadPixxel\\Md2Pdf\\Tests\\": "tests" },
@@ -35,7 +33,8 @@
         "twig/markdown-extra":                "@stable",
         "twig/extra-bundle":                  "@stable",
         "dompdf/dompdf":                      "@stable",
-        "league/commonmark":                  "^2.3"
+        "league/commonmark":                  "^2.3",
+        "scrivo/highlight.php":               "^9.18"
     },
 
     "require-dev": {

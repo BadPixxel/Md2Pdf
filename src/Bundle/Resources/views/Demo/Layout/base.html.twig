@@ -31,6 +31,18 @@
                             <i class="fas fa-fw fa-list-alt"></i>
                             Pdf
                         </a>
+                        <a href="http://{{ app.request.server.get("HTTP_HOST") }}/render.php?{{ pdfClass }}"
+                           target="_blank"
+                           class="btn btn-sm btn-outline-warning">
+                            <i class="fas fa-fw fa-external-link-alt"></i>
+                            Raw
+                        </a>
+                        <a href="http://{{ app.request.server.get("HTTP_HOST") }}/download.php?{{ pdfClass }}"
+                           target="_blank"
+                           class="btn btn-sm btn-outline-primary">
+                            <i class="fas fa-fw fa-download"></i>
+                            Download
+                        </a>
                     {% endif %}
                     <button class="btn btn-sm  btn-outline-warning" type="button"
                             data-toggle="collapse" data-target="#collapseDebug"

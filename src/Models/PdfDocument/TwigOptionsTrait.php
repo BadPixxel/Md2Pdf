@@ -13,6 +13,8 @@
 
 namespace BadPixxel\Md2Pdf\Models\PdfDocument;
 
+use BadPixxel\Md2Pdf\CommonMarkdown\Extension\HiglightExtension\HighlightExtension;
+
 trait TwigOptionsTrait
 {
     /**
@@ -43,6 +45,9 @@ trait TwigOptionsTrait
             "licence" => $this->getLicence(),
             "description" => $this->getDescription(),
             "logo" => $this->getLogo(),
+            "hljsCss" => HighlightExtension::getHighlightStyles(
+                $this->getHighlightTheme()
+            ),
         );
     }
 }

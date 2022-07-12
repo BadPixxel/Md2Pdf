@@ -49,11 +49,20 @@ trait MetadataTrait
     private ?string $logo = null;
 
     /**
-     * User Fontawesome
+     * Use Fontawesome
      *
      * @var bool
      */
     private bool $useFontawesome = false;
+
+    /**
+     * Code Highlight Theme
+     *
+     * @see https://github.com/scrivo/highlight.php
+     *
+     * @var string
+     */
+    private string $highlightTheme = "atom-one-dark";
 
     //====================================================================//
     // GENERIC GETTERS & SETTERS
@@ -195,6 +204,30 @@ trait MetadataTrait
     public function setUseFontawesome(bool $useFontawesome): self
     {
         $this->useFontawesome = $useFontawesome;
+
+        if ($useFontawesome) {
+            $this->setDomPdfOptions(array("isRemoteEnabled" => true));
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getHighlightTheme(): string
+    {
+        return $this->highlightTheme;
+    }
+
+    /**
+     * @param string $theme
+     *
+     * @return self
+     */
+    public function setHighlightTheme(string $theme): self
+    {
+        $this->highlightTheme = $theme;
 
         return $this;
     }

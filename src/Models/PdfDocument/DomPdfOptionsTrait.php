@@ -58,6 +58,10 @@ trait DomPdfOptionsTrait
         $pdfOptions = new Options();
         $options = $this->domPdfOptions;
         //====================================================================//
+        // Setup DomPdf Fonts
+        $pdfOptions->setFontCache(sys_get_temp_dir());
+        $pdfOptions->setFontDir(sys_get_temp_dir());
+        //====================================================================//
         // Setup Root Path for Files
         if (!empty($options["projectPath"]) && is_string($options["projectPath"])) {
             $pdfOptions->setChroot($options["projectPath"]);

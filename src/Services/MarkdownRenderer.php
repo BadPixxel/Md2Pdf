@@ -13,6 +13,8 @@
 
 namespace BadPixxel\Md2Pdf\Services;
 
+use BadPixxel\Md2Pdf\CommonMarkdown\Extension\FontawesomeParser\FontawesomeParser;
+use BadPixxel\Md2Pdf\CommonMarkdown\Extension\HiglightExtension\HighlightExtension;
 use League\CommonMark\Environment\Environment;
 use League\CommonMark\Extension\Attributes\AttributesExtension;
 use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
@@ -38,6 +40,7 @@ class MarkdownRenderer
         //==============================================================================
         // Configure the Environment with all the CommonMark parsers/renderers
         $environment = new Environment($config);
+
         $environment->addExtension(new CommonMarkCoreExtension());
         $environment->addExtension(new AttributesExtension());
         $environment->addExtension(new DefaultAttributesExtension());
@@ -46,6 +49,9 @@ class MarkdownRenderer
         $environment->addExtension(new HeadingPermalinkExtension());
         $environment->addExtension(new FrontMatterExtension());
         $environment->addExtension(new TableOfContentsExtension());
+        $environment->addExtension(new HighlightExtension());
+
+        $environment->addInlineParser(new FontawesomeParser());
         //==============================================================================
         // Instantiate the converter engine and start converting some Markdown!
         return new MarkdownConverter($environment);

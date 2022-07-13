@@ -19,6 +19,7 @@ use Twig\Environment;
 use Twig\Extra\Markdown\DefaultMarkdown;
 use Twig\Extra\Markdown\MarkdownExtension;
 use Twig\Extra\Markdown\MarkdownRuntime;
+use Twig\Loader\ChainLoader;
 use Twig\Loader\FilesystemLoader;
 use Twig\RuntimeLoader\RuntimeLoaderInterface;
 
@@ -63,7 +64,8 @@ class TwigRenderer
         }
         //==============================================================================
         // Create Loader
-        $loader = new FilesystemLoader($templatePath);
+        $loader = new ChainLoader(array(
+            new FilesystemLoader($templatePath)));
         //==============================================================================
         // Create Engine
         $twig = new Environment($loader, array_replace_recursive(
@@ -239,10 +241,21 @@ class TwigRenderer
     private function ensureTwigLocalPath(): void
     {
         $path = dirname(__DIR__, 2)."/src/Bundle/Resources/views";
-        /** @var FilesystemLoader $loader */
-        $loader = $this->twig->getLoader();
-        if (!in_array($path, $loader->getPaths(), true)) {
-            $loader->addPath($path);
+        /** @var ChainLoader|FilesystemLoader $loaders */
+        $loaders = $this->twig->getLoader();
+        if ($loaders instanceof FilesystemLoader) {
+            if (!in_array($path, $loaders->getPaths(), true)) {
+                $loaders->addPath($path);
+            }
+
+            return;
+        }
+        foreach ($loaders->getLoaders() as $loader) {
+            if ($loader instanceof FilesystemLoader) {
+                if (!in_array($path, $loader->getPaths(), true)) {
+                    $loader->addPath($path);
+                }
+            }
         }
     }
 }

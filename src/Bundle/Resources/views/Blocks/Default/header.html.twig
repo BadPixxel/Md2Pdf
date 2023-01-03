@@ -8,12 +8,12 @@
             <img src="{{ logo }}" alt="{{ title | default("Document Title")}}" height="55px">
         </div>
         <div class="col-75 float" style="text-align:center;">
-            <h4>{{ title | default("Document Title")}}</h4>
+            <h4 style="margin-left: 0px;">{{ title | default("Document Title")}}</h4>
             {{ subtitle | default("")}}
         </div>
     {% else %}
         <div class="col-100  float" style="text-align:center;">
-            <h4>{{ title | default("Document Title")}}</h4>
+            <h4 style="margin-left: 0px;">{{ title | default("Document Title")}}</h4>
             {{ subtitle | default("")}}
         </div>
     {% endif %}

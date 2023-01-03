@@ -14,26 +14,3 @@ services:
     # Md2Pdf Services
     BadPixxel\Md2Pdf\Services\TwigRenderer: ~
     BadPixxel\Md2Pdf\Services\DomPdfBuilder: ~
-
-    ################################################################################
-    # League MarkDown Extensions
-    ################################################################################
-#    League\CommonMark\Extension\Table\TableExtension:
-#        tags:
-#            - { name: twig.markdown.league_extension }
-#    League\CommonMark\Extension\Autolink\AutolinkExtension:
-#        tags:
-#            - { name: twig.markdown.league_extension }
-#    League\CommonMark\Extension\Attributes\AttributesExtension:
-#        tags:
-#            - { name: twig.markdown.league_extension }
-#    League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension:
-#        tags:
-#            - { name: twig.markdown.league_extension }
-#    League\CommonMark\Extension\TableOfContents\TableOfContentsExtension:
-#        tags:
-#            - { name: twig.markdown.league_extension }
-#    League\CommonMark\Extension\Strikethrough\StrikethroughExtension:
-#        tags:
-#            - { name: twig.markdown.league_extension }
-

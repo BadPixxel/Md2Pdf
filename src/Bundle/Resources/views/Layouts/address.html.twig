@@ -4,27 +4,23 @@
     <tr>
         <td style="width: 5%"></td>
         <td style="width: 40%" id="{{ leftId | default("2-columns-left") }}"  class="{{ leftClass | default("") }}">
-            {% apply markdown_to_html %}
-                {% if leftTemplate is defined %}
-                    {% include leftTemplate ignore missing %}
-                {% elseif leftContents is defined %}
-                    {{ leftContents|raw }}
-                {% else %}
-                    No Left Contents Provided
-                {% endif %}
-            {% endapply %}
+            {% if leftTemplate is defined %}
+                {% include leftTemplate ignore missing %}
+            {% elseif leftContents is defined %}
+                {{ leftContents|raw }}
+            {% else %}
+                No Left Contents Provided
+            {% endif %}
         </td>
         <td style="width: 15%"></td>
         <td style="width: 40%" id="{{ rightId | default("2-columns-right") }}" class="{{ rightClass | default("") }}">
-            {% apply markdown_to_html %}
-                {% if rightTemplate is defined %}
-                    {% include rightTemplate ignore missing %}
-                {% elseif rightContents is defined %}
-                    {{ rightContents|raw }}
-                {% else %}
-                    No Right Contents Provided
-                {% endif %}
-            {% endapply %}
+            {% if rightTemplate is defined %}
+                {% include rightTemplate ignore missing %}
+            {% elseif rightContents is defined %}
+                {{ rightContents|raw }}
+            {% else %}
+                No Right Contents Provided
+            {% endif %}
         </td>
     </tr>
     </tbody>
